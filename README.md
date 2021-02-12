@@ -6,7 +6,7 @@ Followings are the branches available (Still working)
 ### Vue Fundamentals
 
 - Vue Instance (git checkout vue-instances)
-- Vue Components
+- Vue Components (git checkout vue-components)
 - Methods
 - Computed
 - Methods vs Computed
