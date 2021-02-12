@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+
+    <!-- 
+        VueJS is very small in size. 
+        Size	33.30KB min+gzip
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    
+</head>
+<body>
+    
+
+
+<div id="app1" class="mb-3 bg-green-500 p-5 text-white">
+    <h1>App 1</h1>
+    <!-- following message is available because while instanting vue instance. We've provided data with message in it. -->
+    <h1>{{ message }}</h1>
+</div>
+
+<div id="app2" class="mb-3 bg-green-500 p-5 text-white">
+    <h1>App 2</h1>
+    <!-- following message is available because while instanting vue instance. We've provided data with message in it. -->
+    <h1>{{ message }}</h1>
+</div>
+
+
+<script>
+
+/**
+ |
+ | The way VueJS works is you hook it to a html element then within that 
+ | html element vuejs functionality will be available anything outside of 
+ | it will not have access to view functionalities 
+ |
+ */ 
+
+new Vue({
+    el: '#app1', // This hooks to ID of the html element
+
+    data: { // This shares data within it with vue application
+
+        message: 'Hello from VueJS Instance 1' // can be access from template like {{message}} or v-if="message"
+
+    }
+
+})
+
+
+new Vue({
+    el: '#app2', // This hooks to ID of the html element
+
+    data: { // This shares data within it with vue application
+
+        message: 'Hello from VueJS Instance 2' // can be access from template like {{message}} or v-if="message"
+
+    }
+
+})
+
+
+
+</script>
+</body>
+</html>
