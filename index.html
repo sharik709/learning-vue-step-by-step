@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+
+<body>
+    <div class="container mx-auto mt-10">
+        <h1 class="text-lg">
+            <strong>
+                VueJS Instance
+            </strong>
+        </h1>
+        <p>
+            Every Vue application starts by creating a new Vue instance with the Vue function:
+        </p>
+        <code>
+<pre class="prettyprint lang-javascript">
+    var vm = new Vue({
+        // options
+    })
+</pre>
+
+        </code>
+        <br>
+        <p>
+            Although not strictly associated with the <a
+                href="https://www.geeksforgeeks.org/mvvm-model-view-viewmodel-architecture-pattern-in-android/"
+                class="text-blue-500">MVVM (Model–view–viewmodel) pattern</a>, Vue’s design was partly inspired by it.
+            As a convention, we often use the variable vm (short for ViewModel) to refer to our Vue instance.
+            When you create a Vue instance, you pass in an options object. The majority of this guide describes how you
+            can use these options to create your desired behavior. For reference, you can also browse the full list of
+            options in the API reference.
+        </p>
+        <br>
+        <p>
+            A Vue application consists of a root Vue instance created with new Vue, optionally organized into a tree of
+            nested, reusable components. For example, a todo app’s component tree might look like this:
+        </p>
+        <code>
+<pre class="prettyprint">
+    Root Instance
+    └─ TodoList
+    ├─ TodoItem
+    │  ├─ TodoButtonDelete
+    │  └─ TodoButtonEdit
+    └─ TodoListFooter
+        ├─ TodosButtonClear
+        └─ TodoListStatistics
+</pre>
+        </code>
+        <br>
+        <div class="flex justify-between align-center">
+            <a class="text-blue-500" href="Single/index.html">Single Vue Instance Example</a>
+            <a class="text-blue-500" href="Multiple/contact.html">Multiple Vue Instance in single page Example (You can also have vue instase per page)</a>
+            <br>
+            <a class="text-blue-500" href="https://vuejs.org/v2/guide/instance.html#Creating-a-Vue-Instance">Read
+                more</a>
+        </div>
+        <br>
+        <div class="block">
+            <h1 class="text-lg">
+                Some Helpful Links
+            </h1>
+            <ul class="list-disc pl-5">
+                <li><a class="text-blue-500" href="https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/">Vue Instance (Video)</a></li>
+                <li><a class="text-blue-500" href="https://www.javatpoint.com/vue-js-instance">javatpoint (Article)</a></li>
+                <li><a class="text-blue-500" href="https://medium.com/swlh/vue-js-basics-the-vue-instance-182d113ef6f3">Medium Article</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

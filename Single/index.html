@@ -2,7 +2,9 @@
 <html>
 <head>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="../styles.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
     <!-- 
         VueJS is very small in size. 
@@ -13,16 +15,34 @@
 </head>
 <body>
     
+<div class="container mx-auto mt-10">
+    <div id="app" class="mb-3 bg-green-500 p-5 text-white">
+        <!-- following message is available because while instanting vue instance. We've provided data with message in it. -->
+        <h1>{{ message }}</h1>
+    </div>
 
+    <h1 class="text-lg">Code Block</h1>
+    <code>
+        <h2 class="text-lg">HTML</h2>
+        <pre class="prettyprint">
+            &lt;div id=&quot;app&quot;&gt;
+                &lt;h1&gt;{{ message }}&lt;/h1&gt;
+            &lt;/div&gt;
+        </pre>
+    </code>
+    <br>
+    <code>
+        <h2 class="text-lg">JavaScript</h2>
+        <pre class="prettyprint">
+            new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello from VueJS'
+                }
+            })
+        </pre>
+    </code>
 
-<div id="app" class="mb-3 bg-green-500 p-5 text-white">
-    <!-- following message is available because while instanting vue instance. We've provided data with message in it. -->
-    <h1>{{ message }}</h1>
-</div>
-
-<div class="mb-3 bg-red-500 p-5 text-white">
-    {{ message }}
-    <h1>Vuejs is not working here.</h1>
 </div>
 
 
